@@ -1,0 +1,88 @@
+section{
+    max-width: 80%;
+    min-height: 350px;
+    overflow-y: hidden;
+    margin: 5% auto;
+    border: 5px solid white;
+    position: relative;
+    color: white;
+}
+
+section img{
+    width: 100%;
+    min-height: 350px;
+    opacity: 10%;
+}
+
+section .txt h1{
+    text-align: center;
+    font-family: var(--cinzel);
+}
+
+section .txt p{
+    margin-top: 10px;
+    text-indent: 30px;
+    font-weight: 200;
+}
+
+section .txt a{
+    position: absolute;
+    color: white;
+    right: 10px;
+    bottom: 10px;
+}
+
+section .txt a i{
+    margin-right: 10px;
+}
+
+section .line{
+    width: 90%;
+    height: 2px;
+    background-color: white;
+    margin: auto;
+}
+
+section .txt{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 10px;
+}
+
+aside{
+    height: 10px;
+}
+
+@media screen and (min-width: 413px){
+    section{
+        min-height: 250px;
+    }
+    
+    section img{
+        min-height: 250px;
+    }
+}
+
+@media screen and (min-width: 616px){
+    section .txt{
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 846px){
+    section{
+        min-height: 100px;
+        margin: 2% auto;
+    }
+    
+    section img{
+        max-height: 100px;
+    }
+
+    section .txt{
+        font-size: 1.5em;
+    }
+}

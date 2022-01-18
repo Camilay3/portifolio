@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@200;300;400;600&display=swap');
+
+/*
+
+CINZEL: 400 e 600
+POPPINS: 200, 300, 400 e 600
+
+*/
+
+:root{
+    --color1: #1C0032;
+    --color2: #5d409a;
+    --color3: #DDBEFF;
+    --color4: #F5C116;
+    --color5: #F6F6F6;
+    --cinzel: 'Cinzel', serif;
+    --poppins: 'Poppins', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 70%;
+    display: flex;
+    font-family: var(--poppins);
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color1);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 6px solid var(--color3);
+    border-color: var(--color3) transparent transparent transparent;
+    margin: 8px;
+    display: block;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+    to{transform: rotate(360deg);}
+}
+
+nav .menu-des{
+    display: none;
+    flex-direction: row;
+}
+
+nav .menu-des a{
+    display: flex;
+    margin-right: 50px;
+    height: 100px;
+    align-items: center;
+}
+
+.menu-ativo{
+    background-color: black;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 25px;
+    cursor: pointer;
+}
+
+.hamburguer{
+    position: relative;
+    display: block;
+    background-color: white;
+    width: 25px;
+    height: 2px;
+    top: 25px;
+    left: 13px;
+    transition: .5s ease-in-out;
+}
+
+.hamburguer::before, .hamburguer::after{
+    content: '';
+    background-color: white;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: .5s ease-in-out;
+}
+
+.hamburguer::before{
+    top: -8px;
+}
+
+.hamburguer::after{
+    bottom: -8px;
+}
+
+input:checked ~ label .hamburguer{
+    transform: rotate(45deg);
+}
+
+input:checked ~ label .hamburguer::before{
+    transform: rotate(90deg);
+    top: 0;
+}
+
+input:checked ~ label .hamburguer::after{
+    transform: rotate(90deg);
+    bottom: 0;
+}
+
+.options{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50px;
+    right: 50px;
+}
+
+.options a{
+    background-color: white;
+    color: black;
+    border-radius: 50%;
+    padding: 8px;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.options .page{
+    background-color: var(--color3);
+    color: var(--color1);
+}
+
+.options a:hover{
+    background-color: var(--color1);
+    color: white;
+}
+
+.options a .title{
+    position: absolute;
+    top: 8px;
+    right: 40px;
+    display: block;
+    background-color: black;
+    padding: 1px 8px;
+    color: white;
+    border-radius: 2px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .2s linear;
+}
+
+.options a:hover span.title{
+    transform: translateX(-5px);
+    visibility: visible;
+    opacity: 1;
+}
+
+.options span.title::before{
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 3px;
+    width: 15px;
+    height: 15px;
+    background-color: black;
+    transform: rotate(45deg) translateY(-50%);
+    z-index: -1;
+}
+
+input:checked ~ .options a:nth-child(1){
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-55px);
+}
+
+input:checked ~ .options a:nth-child(2){
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-35px, 45px);
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    color: white;
+    background-color: #0000001a;
+    box-shadow: 0px 1px 5px 1px #0000001a;
+    font-family: var(--cinzel);
+    font-weight: 400;
+}
+
+header nav{
+    display: flex;
+    justify-content: right;
+}
+
+header nav a{
+    margin: auto 2%;
+    color: white;
+    text-decoration: none;
+}
+
+header h1{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    font-size: 1em;
+    margin-left: 20px;
+}
+
+header input{
+    display: none;
+}
+
+@media screen and (min-width: 1000px){
+    .menu-ativo{
+        display: none;
+    }
+
+    nav .menu-des{
+        display: flex;
+    }
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--color3);
+    border-radius: 10px;
+}

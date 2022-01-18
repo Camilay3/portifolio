@@ -1,0 +1,171 @@
+.backf .img{
+    margin: auto;
+    width: 200px;
+    transform: translateY(-80px);
+}
+
+.backf .img2{
+    position: absolute;
+    width: 200px;
+    margin: auto;
+    transform: translateY(-80px);
+}
+
+.foto .backf{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 50px auto 0 auto;
+    background-color: #ffffff80;
+    overflow: hidden;
+}
+
+.foto{
+    transform: scale(0.8);
+}
+
+section{
+    max-width: 80%;
+    margin: auto;
+    min-height: 20vh;
+}
+
+section .textos, section .linguagens{
+    color: white;
+}
+
+section .linguagens{
+    margin-bottom: 20px;
+}
+
+section .textos h1, section h2{
+    text-align: center;
+    font-family: var(--cinzel);
+    font-weight: 600;
+    font-variant: small-caps;
+}
+
+section .textos p{
+    text-align: left;
+    text-indent: 30px;
+    font-weight: 200;
+}
+
+section .linguagens .lista{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+section .linguagens ul{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+}
+
+.linguagens ul .item{
+    display: flex;
+    flex-direction: row;
+}
+
+ul .item li{
+    margin-left: 10px;
+}
+
+.item .fa-star{
+    color: var(--color4);
+}
+
+section .links{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+}
+
+section .links a{
+    text-decoration: none;
+    color: white;
+    border-radius: 2px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid var(--color2);
+    cursor: pointer;
+}
+
+section .links a:hover{
+    transform: scale(1.05);
+    background-color: var(--color2);
+}
+
+section .links a:active{
+    transform: scale(0.95);
+}
+
+@media screen and (min-width: 600px){
+    .foto{
+        transform: scale(0.9);
+    }
+
+    .foto .backf{
+        margin: 70px auto 0 auto;
+    }
+
+    section .linguagens{
+        max-width: 70%;
+        margin: 2% auto;
+    }
+
+    section .contato h2{
+        margin-top: 8%;
+    }
+
+    section .contato .links{
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .foto{
+        position: absolute;
+        right: 100px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .foto .backf{
+        width: 350px;
+        height: 350px;
+    }
+
+    .backf .img, .backf .img2{
+        width: 350px;
+        transform: translateY(-80px);
+    }
+
+    section .linguagens, section .textos{
+        max-width: 50%;
+        left: 0;
+        margin-left: 0;
+        min-height: 20vh;
+    }
+
+    section .textos{
+        margin-top: 2%;
+        font-size: 1.5em;
+    }
+
+    section .linguagens{
+        font-size: 1.2em;
+        max-width: 40%;
+        margin-left: 4%;
+    }
+
+    section .contato{
+        margin-top: 15%;
+        font-size: 1.2em;
+    }
+}
