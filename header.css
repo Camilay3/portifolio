@@ -1,12 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@200;300;400;600&display=swap');
 
-/*
-
-CINZEL: 400 e 600
-POPPINS: 200, 300, 400 e 600
-
-*/
-
 :root{
     --color1: #1C0032;
     --color2: #5d409a;
@@ -66,6 +59,11 @@ body{
 
 @keyframes spin{
     to{transform: rotate(360deg);}
+}
+
+nav .menu{
+    position: absolute;
+    right: 0;
 }
 
 nav .menu-des{
