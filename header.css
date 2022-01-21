@@ -73,9 +73,23 @@ nav .menu-des{
 
 nav .menu-des a{
     display: flex;
-    margin-right: 50px;
-    height: 100px;
-    align-items: center;
+    margin: 40px 50px;
+    position: relative;
+}
+
+nav .menu-des a::after, nav .menu-des a.page::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    transition: .2s linear;
+}
+
+nav .menu-des a:hover::after, nav .menu-des a.page::after{
+    width: 100%; 
 }
 
 .menu-ativo{
