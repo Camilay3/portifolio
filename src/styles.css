@@ -1,0 +1,21 @@
+:root {
+    --darkPurple: #0F0026;
+    --purple: #3A0081;
+    --lightPurple: #8059BA;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    color: var(--white);
+}
+
+body {
+    width: 100dvw;
+    height: 100dvh;
+    padding: 60px;
+    background-color: var(--darkPurple);
+}
