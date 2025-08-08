@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { NavigationEnd, Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar-desktop',
@@ -8,5 +8,15 @@ import { RouterLink } from '@angular/router';
   styleUrl: './navbar-desktop.component.css'
 })
 export class NavbarDesktopComponent {
-  selecionado: boolean = false;
+  rotaAtual: string = '';
+
+  constructor(private router: Router) { }
+
+  ngOnInit(): void {
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.rotaAtual = event.urlAfterRedirects;
+      }
+    });
+  }
 }

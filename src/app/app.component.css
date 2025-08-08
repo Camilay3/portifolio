@@ -7,7 +7,7 @@ section {
         'app-card app-navbar-desktop'
         'app-card container';
     gap: 4rem;
-    row-gap: 2rem;
+    row-gap: 3rem;
 
     grid-template-columns: 20% 1fr;
     grid-template-rows: auto 1fr;
