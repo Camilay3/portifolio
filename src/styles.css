@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root {
     --darkPurple: #0F0026;
     --purple: #3A0081;
     --lightPurple: #8059BA;
     --white: #fff;
+    --shadow: #00000020;
 }
+
+
+/* 1rem: aprox. 16px */
+
 
 * {
     margin: 0;
@@ -11,11 +18,16 @@
     border: 0;
     box-sizing: border-box;
     color: var(--white);
+    font-family: "Inter", sans-serif;
 }
 
 body {
     width: 100dvw;
     height: 100dvh;
-    padding: 60px;
+    padding: 3em;
     background-color: var(--darkPurple);
+}
+
+p, h1 {
+    cursor: default;
 }
