@@ -1,0 +1,97 @@
+/* DESKTOP */
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section p {
+    margin-top: 2px;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: 1px solid transparent;
+    text-align: center;
+    border-bottom: 1px solid var(--lightPurple);
+}
+
+section p:hover {
+    font-weight: 600;
+    border: 1px solid var(--lightPurple);
+    box-shadow: 0 0 4px 0 var(--white);
+}
+
+/* Evitar letras balançando ao usar o hover */
+section p::after {
+    content: attr(data-text);
+    font-weight: 700;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    display: block;
+}
+
+section .selected {
+    border: 1px solid var(--white) !important;
+    box-shadow: none !important;
+    font-weight: bold !important;
+}
+
+@media screen and (max-width: 1080px) {
+    section p {
+        font-size: 1rem;
+    }
+}
+
+/* MOBILE */
+.mobile {
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+    background-color: var(--purple);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.mobile .link {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.mobile .link i {
+    height: fit-content;
+    width: fit-content;
+}
+
+.mobile .link p {
+    font-size: 0.5rem;
+    
+}
+
+.mobile .selected i {
+    border-radius: 50%;
+    position: absolute;
+    padding: 0.35rem 0.45rem;
+    top: -2.5rem;
+    background-color: var(--white);
+    color: var(--purple);
+    border: 3.5px solid var(--darkPurple);
+    box-shadow: 0 0 4px 4px var(--shadow);
+    animation: up .5s ease-out;
+}
+
+@keyframes up {
+    0% {
+        top: -2.2rem;
+    }
+    100% {
+        top: -2.5rem;
+    }
+}
+
+.mobile .selected p {
+    font-weight: bold;
+}
