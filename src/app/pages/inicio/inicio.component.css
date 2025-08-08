@@ -1,0 +1,40 @@
+h1, p {
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+}
+
+h1 {
+    white-space: nowrap;
+    overflow: hidden;
+    animation: escrevendo 3s steps(34), cursor .4s step-end infinite alternate;
+    border-right: 3px solid var(--lightPurple);
+}
+
+@keyframes escrevendo {
+    0% { width: 0; }
+    100% { width: 28ch; }
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.techstack {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.bloco {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-inline: 2rem;
+    margin-top: 3rem;
+}

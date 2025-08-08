@@ -1,5 +1,6 @@
 section {
-    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
     height: 100%;
     display: grid;
     grid-template-areas:
@@ -22,4 +23,6 @@ app-card {
 
 .container {
     grid-area: container;
+    width: 100%;
+    overflow: hidden;
 }
