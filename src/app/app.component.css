@@ -4,12 +4,12 @@ section {
     height: 100%;
     display: grid;
     grid-template-areas:
-        'app-card app-navbar-desktop'
-        'app-card container';
-    gap: 4rem;
-    row-gap: 3rem;
+        "app-card app-navbar-desktop"
+        "app-card container";
+    gap: 2rem;
+    row-gap: 4rem;
 
-    grid-template-columns: 20% 1fr;
+    grid-template-columns: minmax(200px, 20%) 1fr;
     grid-template-rows: auto 1fr;
 }
 
@@ -26,9 +26,13 @@ app-card {
     width: 100%;
     overflow-x: hidden;
     padding-bottom: 1rem;
+    padding-right: 8px;
+
+    display: flex;
+    justify-content: center;
 }
 
-/* SCROLLBAR */
+/* Scrollbar */
 .container::-webkit-scrollbar {
     width: 4px;
 }
@@ -36,4 +40,14 @@ app-card {
 .container::-webkit-scrollbar-thumb {
     background-color: var(--lightPurple);
     border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 900px) {
+    section {
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    /* NAVBAR DESKTOP */
 }

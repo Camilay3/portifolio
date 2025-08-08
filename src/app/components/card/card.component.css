@@ -48,7 +48,7 @@ h1 {
 .contatos a {
     background-color: var(--lightPurple);
     border: 2px solid transparent;
-    padding: 1rem;
+    padding: 1rem 0.2rem;
     border-radius: 1rem;
     text-decoration: none;
     font-weight: bold;
@@ -80,4 +80,22 @@ h1 {
 
 .redes i:hover {
     color: var(--lightPurple);
+}
+
+@media screen and (max-width: 1300px) {
+    section {
+        padding: 1.5rem;
+    }
+    h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    section {
+        padding: 1rem;
+    }
+    h1 {
+        font-size: 1rem;
+    }
 }

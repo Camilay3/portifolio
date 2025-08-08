@@ -36,3 +36,9 @@ section p::after {
     box-shadow: none !important;
     font-weight: bold !important;
 }
+
+@media screen and (max-width: 1080px) {
+    section p {
+        font-size: 1rem;
+    }
+}

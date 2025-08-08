@@ -26,10 +26,21 @@
 body {
     width: 100dvw;
     height: 100dvh;
-    padding: 3em;
+    padding: 3rem;
     background-color: var(--darkPurple);
 }
 
 p, h1, h3, span {
     cursor: default;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        padding: 2rem;
+    }
+}
+@media screen and (max-width: 800px) {
+    body {
+        padding: 1rem;
+    }
 }
