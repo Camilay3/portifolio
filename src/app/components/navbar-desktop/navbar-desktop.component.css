@@ -1,0 +1,35 @@
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section p {
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: 1px solid transparent;
+    text-align: center;
+}
+
+section p:hover {
+    border: 1px solid var(--white);
+    font-weight: bold;
+    background-color: var(--lightPurple);
+}
+
+/* Evitar letras balançando ao usar o hover */
+section p::after {
+    content: attr(data-text);
+    font-weight: 700;
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    display: block;
+}
+
+.selected {
+    border: 2px solid var(--white) !important;
+    font-weight: bold;
+}

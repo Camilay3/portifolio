@@ -1,6 +1,5 @@
 section {
     height: 100%;
-    width: 20%;
     padding: 2rem;
     background-color: var(--purple);
     border-radius: 2rem;
@@ -9,6 +8,10 @@ section {
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+}
+
+h1 {
+    font-size: 1.5rem;
 }
 
 .apresentacao {
