@@ -1,0 +1,26 @@
+.icones {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    flex-wrap: wrap;
+}
+
+.icone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem;
+}
+
+i {
+    display: flex;
+    color: var(--lightPurple);
+    font-size: 3rem;
+    width: fit-content;
+    margin-bottom: 0.5rem;
+}
+
+span {
+    font-size: 0.7rem;
+}
