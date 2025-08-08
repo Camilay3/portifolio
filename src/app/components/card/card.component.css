@@ -55,6 +55,7 @@ h1 {
     width: 100%;
     text-align: center;
     margin-top: 1rem;
+    box-shadow: 0 0 8px 8px var(--shadow);
 }
 
 .contatos a:hover {
@@ -71,12 +72,12 @@ h1 {
     width: 100%;
 }
 
-.redes svg {
-    fill: var(--white);
-    width: 2rem;
+.redes i {
+    color: var(--white);
+    font-size: 2rem;
     cursor: pointer;
 }
 
-.redes svg:hover {
-    fill: var(--lightPurple);
+.redes i:hover {
+    color: var(--lightPurple);
 }

@@ -24,5 +24,16 @@ app-card {
 .container {
     grid-area: container;
     width: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
+    padding-bottom: 1rem;
+}
+
+/* SCROLLBAR */
+.container::-webkit-scrollbar {
+    width: 4px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: var(--lightPurple);
+    border-radius: 0.5rem;
 }
