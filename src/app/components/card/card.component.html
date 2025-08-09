@@ -1,19 +1,41 @@
-<section>
-    <div class="apresentacao">
-
-        <h1>Camila Santiago</h1>
-        <div class="foto"></div>
-        <p>Web Developer</p>
-        
-    </div>
-
-    <div class="contatos">            
-        <div class="redes">
-            <i (click)="redirecionar('https://github.com/Camilay3')" class="fab fa-github"></i>
-            <i (click)="redirecionar('https://www.linkedin.com/in/camila-santiago-7a9b9b354/')" class="fab fa-linkedin"></i>
-            <i (click)="redirecionar('mailto:camila.santiago026@gmail.com')" class="fas fa-envelope"></i>
+@if (desktop) {
+    <section>
+        <div class="apresentacao">
+            
+            <h1>Camila Santiago</h1>
+            <div class="foto"></div>
+            <p>Web Developer</p>
+            
         </div>
-        <a href="http://" target="_blank" rel="noopener noreferrer">Vamos conversar!</a>
+        
+        <div class="contatos">            
+            <div class="redes">
+                <i (click)="redirecionar('https://github.com/Camilay3')" class="fab fa-github"></i>
+                <i (click)="redirecionar('https://www.linkedin.com/in/camila-santiago-7a9b9b354/')" class="fab fa-linkedin"></i>
+                <i (click)="redirecionar('mailto:camila.santiago026@gmail.com')" class="fas fa-envelope"></i>
+            </div>
+            <a href="http://" target="_blank" rel="noopener noreferrer">Vamos conversar!</a>
+        </div>
+    </section>
+
+} @else {
+    <div class="mobile">
+        <div class="content">
+            <div class="apresentacao">
+                <h1>Camila Santiago</h1>
+                <p>Web Developer</p>
+            </div>
+
+            <div class="contatos">            
+                <div class="redes">
+                    <i (click)="redirecionar('https://github.com/Camilay3')" class="fab fa-github"></i>
+                    <i (click)="redirecionar('https://www.linkedin.com/in/camila-santiago-7a9b9b354/')" class="fab fa-linkedin"></i>
+                    <i (click)="redirecionar('mailto:camila.santiago026@gmail.com')" class="fas fa-envelope"></i>
+                </div>
+                <a href="http://" target="_blank" rel="noopener noreferrer">Vamos conversar!</a>
+            </div>
+        </div>
+
+        <div class="foto"></div>
     </div>
-    
-</section>
+}
