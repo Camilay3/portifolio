@@ -132,8 +132,7 @@ section .redes i:hover {
     font-size: 1rem;
 }
 
-.mobile .content p,
-a {
+.mobile .content p, .mobile .content a {
     font-size: 0.5rem;
 }
 

@@ -1,4 +1,4 @@
-.icones {
+:host {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,7 +30,7 @@ span {
         margin: 0.8rem;
     }
 }
-@media screen and (max-width: 1230px) {
+@media screen and (max-width: 1240px) {
     i {
         font-size: 2.5rem;
     }

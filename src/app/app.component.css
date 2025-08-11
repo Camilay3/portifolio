@@ -1,13 +1,12 @@
 section {
     max-width: 100%;
-    overflow-x: hidden;
     height: 100%;
     display: grid;
     grid-template-areas:
         "app-card app-navbar"
         "app-card container";
     gap: 2rem;
-    row-gap: 4rem;
+    row-gap: 2rem;
 
     grid-template-columns: minmax(200px, 20%) 1fr;
     grid-template-rows: auto 1fr;
@@ -22,14 +21,22 @@ app-card {
 }
 
 .container {
-    grid-area: container;
+    height: 100%;
     width: 100%;
-    overflow-x: hidden;
+    grid-area: container;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-items: center;
     padding-bottom: 1rem;
-    padding-right: 8px;
+    padding-right: 4px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
-    display: flex;
-    justify-content: center;
+router-outlet {
+    /* Para utilizar o display grid no container sem interferência */
+    display: none; 
 }
 
 /* Scrollbar */
@@ -56,8 +63,12 @@ app-card {
             "app-card app-card"
             "container container"
             "app-navbar app-navbar";
-        row-gap: 2rem;
+        row-gap: 1rem;
 
-        grid-template-rows: 20% 60% 1fr;
+        grid-template-rows: 20% 1fr auto;
+    }
+
+    .container {
+        padding-top: 0.2rem;
     }
 }
