@@ -1,0 +1,144 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bloco {
+    border: 2px solid var(--white);
+    border-radius: 2rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 70%;
+    position: relative;
+    row-gap: 2rem;
+}
+
+.bloco a i:hover {
+    color: var(--lightPurple);
+}
+
+.bloco .github {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+}
+
+.titulo {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.descricao {
+    max-width: 100%;
+    display: flex;
+    gap: 2rem;
+}
+
+.descricao p {
+    min-height: 8rem;
+    display: flex;
+    align-items: center;
+    hyphens: auto;
+    text-align: justify;
+}
+
+.foto {
+    cursor: pointer;
+    position: relative;
+    max-width: 30%;
+    margin-right: 2rem;
+    border-radius: 1rem;
+}
+
+.popup {
+    position: fixed;
+    min-width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    cursor: default;
+    background-color: var(--darkShadow);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.popup img {
+    max-width: 80%;
+    min-height: 80% !important;
+    border-radius: 0 !important;
+    opacity: 1;
+    animation: opacidade .3s linear;
+}
+
+@keyframes opacidade {
+    from {opacity: 0; transform: scale(0);}
+    to {opacity: 1; transform: scale(1);}
+}
+
+.popup:hover .eye {
+    opacity: 0 !important;
+    border: 0 !important;
+}
+
+.close {
+    position: fixed;
+    top: 2rem;
+    right: 4rem;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 9;
+}
+
+.close:hover {
+    color: var(--lightPurple);
+}
+
+.descricao img {
+    width: 100%;
+    min-height: 100%;
+    border-radius: 1rem;
+}
+
+.descricao .eye {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--white);
+    background-color: var(--darkPurple);
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    border-radius: 1rem;
+}
+
+.foto:hover .eye {
+    opacity: .8;
+    border: 2px solid var(--white);
+}
+
+.tecnologias {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.tecnologias span {
+    background-color: var(--lightPurple);
+    font-size: 0.8rem;
+    padding: 0.2rem 0.8rem;
+    border-radius: 1rem;
+}

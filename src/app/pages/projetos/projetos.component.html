@@ -1,1 +1,36 @@
-<p>projetos works!</p>
+@if (projetos) {
+    
+    @for (projeto of projetos; track projeto) {
+        <div class="bloco">
+            <div class="titulo">
+                <h1>{{projeto.nome}}</h1>
+                @if (projeto.url) {
+                    <a href="{{projeto.url}}" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                }
+            </div>
+            @if (projeto.repositorio) {
+                <a class="github" href="{{projeto.repositorio}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            }
+            <div class="descricao">
+                <p>{{projeto.descricao}}</p>
+                @if (projeto.src) {
+                    <div (click)="expandir(true)" [class.popup]="imagemExpandida" class="foto">
+                        <img src="{{projeto.src}}" alt="Imagem do(a) {{projeto.nome}}">
+                        <i class="eye far fa-eye"></i>
+                    </div>
+                    @if (imagemExpandida) {
+                        <i (click)="expandir(false)" class="close fi fi-rr-circle-xmark"></i>
+                    }
+                }
+            </div>
+            <div class="tecnologias">
+                @for (tech of projeto.tecnologia; track tech) {
+                    <span>{{tech}}</span>
+                }
+            </div>
+        </div>
+    }
+
+} @else {
+    <p>Ops! Nenhum projeto foi encontrado no momento. Por favor, tente recarregar a página e retorne em instantes.</p>
+}
