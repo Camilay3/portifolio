@@ -10,10 +10,6 @@
     --shadow: #00000020;
 }
 
-
-/* 1rem: aprox. 16px */
-
-
 * {
     margin: 0;
     padding: 0;
@@ -32,6 +28,15 @@ body {
 
 p, h1, h3, span {
     cursor: default;
+}
+
+p::selection, h1::selection, h3::selection, span::selection {
+    background-color: var(--lightPurple);
+    color: var(--white);
+}
+
+h3 {
+    margin-top: 2.5rem;
 }
 
 @media screen and (max-width: 900px) {

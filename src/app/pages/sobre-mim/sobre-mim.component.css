@@ -1,0 +1,44 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p.resumo {
+    text-align: justify;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    text-indent: 2rem;
+}
+
+.formacoes {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-top: 0.3rem;
+    gap: 1rem;
+}
+
+.formacao {
+    display: flex;
+    align-items: center;
+}
+
+.formacao .descricao {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formacao img {
+    margin-right: 1rem;
+}
+
+.descricao p {
+    margin-right: 0.5rem;
+}
+
+.formacao span {
+    color: var(--lightPurple);
+    font-weight: bold;
+}
