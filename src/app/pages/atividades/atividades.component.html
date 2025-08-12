@@ -1,1 +1,34 @@
-<p>atividades works!</p>
+<h1>Eventos & Participações</h1>
+
+@if (eventos) {
+    <div class="eventos">
+        @for (evento of eventosPaginados; track evento) {
+            <div class="evento fade" [class.fade-enter]="animando">
+                @if (evento.src) {
+                    <img draggable="false" src="{{evento.src}}">
+                }
+                <div class="desc">
+                    @if (evento.url) {
+                        <h3>{{evento.nome}}<a href="{{evento.url}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></h3>
+                    } @else {
+                        <h3>{{evento.nome}}</h3>
+                    }
+                    
+                    @if (evento.data && evento.modalidade) {
+                        <span>{{evento.data}} - {{evento.modalidade}}</span>
+                    }
+                    <p>{{evento.descricao}}</p>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="paginacao">
+        <i [class.desativo]="indexPagina == 0" (click)="paginaAnterior()" class="setas fas fa-chevron-left"></i>
+        <span class="page">Página {{indexPagina+1}} de {{totalPaginas}}</span>
+        <i [class.desativo]="indexPagina == totalPaginas-1" (click)="proximaPagina()" class="setas fas fa-chevron-right"></i>
+    </div>
+
+} @else {
+    <p>Ops! Nenhum evento foi encontrado no momento. Por favor, tente recarregar a página e retorne em instantes.</p>
+}

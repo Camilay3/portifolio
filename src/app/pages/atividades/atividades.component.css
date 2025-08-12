@@ -1,0 +1,169 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.eventos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.evento {
+    margin-top: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    height: fit-content;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.evento span {
+    color: var(--lightPurple);
+    font-weight: bold;
+}
+
+.evento img {
+    width: 15%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 1rem;
+    border-radius: 1rem;
+}
+
+.desc {
+    display: flex;
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    max-width: 60%;
+}
+
+.desc p {
+    margin-top: 0.8rem;
+    text-align: justify;
+    hyphens: auto;
+}
+
+.desc a {
+    border: 1px solid var(--white);
+    border-radius: 0.3rem;
+    padding: 0.3rem 0.2rem;
+    display: flex;
+    width: fit-content;
+    text-decoration: none;
+    top: 0;
+    right: 0;
+    font-size: 50%;
+}
+
+.desc a:hover i {
+    color: var(--lightPurple);
+}
+
+.paginacao {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.desativo {
+    cursor: default !important;
+    opacity: .5;
+}
+
+.desativo:hover {
+    color: var(--white) !important;
+}
+
+.paginacao i {
+    cursor: pointer;
+}
+
+.paginacao i:hover {
+    color: var(--lightPurple);
+}
+
+.fade {
+    opacity: 1;
+    transition: opacity 0.3s linear;
+}
+
+.fade-enter {
+    opacity: 0;
+}
+
+@media screen and (max-width: 1000px) {
+    .desc {
+        max-width: 100%;
+    }
+
+    .evento img {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .desc {
+        max-width: 100%;
+    }
+
+    .evento img {
+        width: 15%;
+    }
+
+    .evento p, .evento span {
+        font-size: 0.8rem;
+    }
+
+    .evento h3 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .evento img {
+        width: 25%;
+    }
+
+    .evento p, .evento span {
+        font-size: 0.7rem;
+    }
+
+    .evento h3 {
+        font-size: 0.9rem;
+    }
+
+    .paginacao span, .paginacao i {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .evento img {
+        width: 30%;
+    }
+}
