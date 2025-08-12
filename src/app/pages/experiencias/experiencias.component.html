@@ -1,1 +1,26 @@
-<p>experiencias works!</p>
+<h1>Voluntariados e profissionais</h1>
+<div class="experiencias">
+    @for (exp of experiencias; track exp) {
+        <div class="experiencia">
+            <h1>{{exp.cargo}} <span>- {{exp.data}}</span></h1>
+            @if (exp.voluntario) {
+                <span class="empresa"><i class="far fa-handshake"></i>{{exp.empresa}}</span>
+            } @else {
+                <span class="empresa"><i class="fi fi-rs-building"></i>{{exp.empresa}}</span>
+            }
+            <div class="line"></div>
+            <p>{{exp.descricao}}</p>
+        </div>
+    }
+</div>
+
+<h1>Cursos</h1>
+<div class="cursos">
+    @for (curso of cursos; track curso) {
+        <div class="curso">
+            <h3>{{curso.nome}}</h3>
+            <p><i class="fi fi-rr-graduation-cap"></i>{{curso.orgao}}</p>
+            <p><i class="fi fi-rr-calendar-clock"></i>{{curso.dataDeConclusao}}</p>
+        </div>
+    }
+</div>
