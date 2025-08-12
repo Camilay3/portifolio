@@ -3,6 +3,30 @@
     align-items: center;
     justify-content: center;
     height: 100%;
+    width: 100%;
+    gap: 1rem;
+}
+
+.setas {
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.setas:nth-of-type(2) {
+    order: 3;
+}
+
+.setas:hover {
+    color: var(--lightPurple);
+}
+
+.desativo {
+    opacity: .5;
+    cursor: default;
+}
+
+.desativo:hover {
+    color: var(--white);
 }
 
 .bloco {
@@ -203,5 +227,14 @@
 
     .bloco {
         width: 100%;
+    }
+
+    .setas {
+        order: 2;
+        font-size: 1.5rem;
+    }
+
+    :host {
+        flex-wrap: wrap;
     }
 }
