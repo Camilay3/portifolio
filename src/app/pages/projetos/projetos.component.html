@@ -16,7 +16,9 @@
                 @if (projeto.src) {
                     <div (click)="expandir(true)" [class.popup]="imagemExpandida" class="foto">
                         <img src="{{projeto.src}}" alt="Imagem do(a) {{projeto.nome}}">
-                        <i class="eye far fa-eye"></i>
+                        @if (!imagemExpandida) {
+                            <i class="eye far fa-eye"></i>
+                        }
                     </div>
                     @if (imagemExpandida) {
                         <i (click)="expandir(false)" class="close fi fi-rr-circle-xmark"></i>

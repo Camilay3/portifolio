@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 100%;
 }
 
 .bloco {
@@ -13,6 +14,7 @@
     align-items: start;
     flex-direction: column;
     width: 70%;
+    max-height: 90%;
     position: relative;
     row-gap: 2rem;
 }
@@ -73,15 +75,23 @@
 
 .popup img {
     max-width: 80%;
-    min-height: 80% !important;
+    height: auto;
+    object-fit: contain;
     border-radius: 0 !important;
     opacity: 1;
     animation: opacidade .3s linear;
 }
 
 @keyframes opacidade {
-    from {opacity: 0; transform: scale(0);}
-    to {opacity: 1; transform: scale(1);}
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .popup:hover .eye {
@@ -141,4 +151,57 @@
     font-size: 0.8rem;
     padding: 0.2rem 0.8rem;
     border-radius: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+    .foto {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    p {
+        font-size: 0.8rem;
+    }
+
+    .tecnologias span {
+        font-size: 0.5rem;
+    }
+
+    .descricao {
+        gap: 1rem;
+    }
+
+    .foto .eye {
+        opacity: .8;
+        border: 2px solid var(--white);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .descricao .eye {
+        font-size: 1.5rem;
+    }
+
+    .close {
+        right: 2rem;
+    }
+
+    h1,
+    .bloco .github {
+        font-size: 1rem;
+    }
+
+    p {
+        font-size: 0.6rem;
+    }
+
+    .tecnologias span {
+        padding: 0.1rem 0.4rem;
+        border-radius: 0.5rem;
+    }
+
+    .bloco {
+        width: 100%;
+    }
 }
