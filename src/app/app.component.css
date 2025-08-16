@@ -28,7 +28,7 @@ app-card {
     grid-template-columns: 1fr;
     align-items: center;
     justify-items: center;
-    padding-bottom: 1rem;
+    padding-bottom: 0.2rem;
     padding-right: 4px;
     overflow-x: hidden;
     overflow-y: auto;

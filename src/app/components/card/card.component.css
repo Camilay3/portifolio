@@ -1,10 +1,19 @@
-/* CARD */
-section {
+:host {
+    width: 100%;
     height: 100%;
     padding: 2rem;
     background-color: var(--purple);
     border-radius: 2rem;
 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+section {
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -15,8 +24,7 @@ h1 {
     font-size: 1.5rem;
 }
 
-section .apresentacao {
-    height: 70%;
+.apresentacao {
     width: 100%;
 
     display: flex;
@@ -25,20 +33,7 @@ section .apresentacao {
     flex-direction: column;
 }
 
-section .apresentacao .foto {
-    width: 100%;
-    height: 100%;
-    margin: 1rem 0;
-    background-image: url('/Camila.jpeg');
-    box-shadow: 0 0 8px 8px var(--shadow);
-
-    background-size: cover;
-    background-position: center 20%;
-    background-repeat: no-repeat;
-    border-radius: 1rem;
-}
-
-section .contatos {
+.contatos {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,10 +41,32 @@ section .contatos {
     width: 100%;
 }
 
-section .contatos a {
+.redes {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+
+    width: 100%;
+}
+
+.redes i {
+    color: var(--white);
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.redes i:hover {
+    color: var(--lightPurple);
+}
+
+.contatos a {
     background-color: var(--lightPurple);
     border: 2px solid transparent;
-    padding: 1rem 0.2rem;
+    padding: 0.8rem 0.5rem;
+    font-size: 0.8rem;
     border-radius: 1rem;
     text-decoration: none;
     cursor: pointer;
@@ -60,150 +77,81 @@ section .contatos a {
     box-shadow: 0 0 8px 8px var(--shadow);
 }
 
-section .contatos a:hover {
+.contatos a:hover {
     background-color: transparent;
     border: 2px solid var(--white);
 }
 
-section .redes {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
-
+img {
     width: 100%;
-}
+    aspect-ratio: 0.8;
+    object-position: center 20%;
+    object-fit: cover;
+    margin: 1rem 0;
+    box-shadow: 0 0 8px 8px var(--shadow);
 
-section .redes i {
-    color: var(--white);
-    font-size: 2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-}
-
-section .redes i:hover {
-    color: var(--lightPurple);
+    border-radius: 1rem;
 }
 
 @media screen and (max-width: 1300px) {
-    section {
+    :host {
         padding: 1.5rem;
     }
 
-    section h1 {
+    h1 {
         font-size: 1.2rem;
     }
 }
 
 @media screen and (max-width: 900px) {
-    section {
+    :host {
         padding: 1rem;
     }
 
-    section h1 {
+    h1 {
         font-size: 1rem;
     }
 }
 
-/* MOBILE */
-.mobile {
-    height: 100%;
-    padding: 0.8rem;
-    border-radius: 1rem;
-    background-color: var(--purple);
-
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: row;
-}
-
-.mobile .content {
-    width: 60%;
-    height: 100%;
-}
-
-.mobile .content,
-.mobile .content .apresentacao {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-}
-
-.mobile .content h1 {
-    font-size: 1rem;
-}
-
-.mobile .content p, .mobile .content a {
-    font-size: 0.5rem;
-}
-
-.mobile .contatos {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-}
-
-.mobile .contatos .redes {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-}
-
-.mobile .contatos .redes i {
-    display: flex;
-    align-items: center;
-}
-
-.mobile .contatos a {
-    background-color: var(--lightPurple);
-    padding: 0.3rem;
-    border-radius: 0.5rem;
-    text-decoration: none;
-    font-weight: bold;
-    width: 100%;
-    text-align: center;
-    margin-top: 0.4rem;
-    box-shadow: 0 0 8px 8px var(--shadow);
-}
-
-.mobile .foto {
-    width: 30%;
-    height: 100%;
-    margin-left: 1rem;
-    background-image: url('/Camila.jpeg');
-    box-shadow: 0 0 8px 8px var(--shadow);
-
-    background-size: cover;
-    background-position: center 20%;
-    background-repeat: no-repeat;
-    border-radius: 0.5rem;
-}
-
-@media screen and (min-width: 500px) {
-    .mobile .foto {
-        width: 20%;
+@media screen and (max-width: 770px) {
+    :host {
+        padding: 0.8rem;
+        border-radius: 1rem;
+        gap: 1rem;
     }
 
-    .mobile .content {
-        width: 70%;
+    section {
+        gap: 1rem;
+        padding-inline: 5rem;
     }
 
-    .mobile .content h1 {
-        font-size: 1.25rem;
+    img {
+        height: 100%;
+        width: 30%;
     }
 
-    .mobile .content a, .mobile .content p {
-        font-size: 0.75rem;
+    h1 {
+        font-size: 1rem;
     }
 
-    .mobile .content .apresentacao {
-        flex-direction: row;
-        justify-content: space-evenly;
-        width: 100%;
+    p {
+        font-size: 0.5rem;
+    }
+
+    .contatos i {
+        font-size: 1rem;
+    }
+
+    .contatos a {
+        padding: 0.3rem;
+        border-radius: 0.5rem;
+        margin-top: 0.4rem;
+        font-size: 0.6rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    section {
+        padding-inline: 0;
     }
 }

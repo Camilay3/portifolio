@@ -1,42 +1,27 @@
-@if (desktop) {
-    <section>
+<section>
+    @if (desktop) {
         <div class="apresentacao">
-            
             <h1>Camila Santiago</h1>
-            <div class="foto"></div>
+            <img draggable="false" src="Camila.jpeg" class="foto">
             <p>Web Developer</p>
-            
         </div>
-        
-        <div class="contatos">            
-            <div class="redes">
-                <i (click)="redirecionar('https://github.com/Camilay3')" class="fab fa-github" title="Github"></i>
-                <i (click)="redirecionar('https://www.linkedin.com/in/camila-santiago-7a9b9b354/')" class="fab fa-linkedin" title="Linkedin"></i>
-                <i (click)="redirecionar('https://github.com/Camilay3/portifolio#readme')" class="fi fi-ss-book-alt" title="Documentação do portifólio"></i>
-            </div>
-            <a (click)="openModal()">Vamos conversar!</a>
+    } @else {
+        <div class="apresentacao">
+            <h1>Camila Santiago</h1>
+            <p>Web Developer</p>
         </div>
-
-    </section>
-
-} @else {
-    <div class="mobile">
-        <div class="content">
-            <div class="apresentacao">
-                <h1>Camila Santiago</h1>
-                <p>Web Developer</p>
-            </div>
-
-            <div class="contatos">            
-                <div class="redes">
-                    <i (click)="redirecionar('https://github.com/Camilay3')" class="fab fa-github" title="Github"></i>
-                    <i (click)="redirecionar('https://www.linkedin.com/in/camila-santiago-7a9b9b354/')" class="fab fa-linkedin" title="Linkedin"></i>
-                    <i (click)="redirecionar('https://github.com/Camilay3/portifolio#readme')" class="fi fi-ss-book-alt" title="Documentação do portifólio"></i>
-                </div>
-                <a (click)="openModal()">Vamos conversar!</a>
-            </div>
+    }
+    
+    <div class="contatos">            
+        <div class="redes">
+            <i (click)="redirecionar('https://github.com/Camilay3')" class="fab fa-github" title="Github"></i>
+            <i (click)="redirecionar('https://www.linkedin.com/in/camila-santiago-7a9b9b354/')" class="fab fa-linkedin" title="Linkedin"></i>
+            <i (click)="redirecionar('https://github.com/Camilay3/portifolio#readme')" class="fi fi-ss-book-alt" title="Documentação do portifólio"></i>
         </div>
-
-        <div class="foto"></div>
+        <a (click)="openModal()">Vamos conversar!</a>
     </div>
+</section>
+
+@if (!desktop) {
+    <img draggable="false" src="Camila.jpeg" class="foto">
 }
