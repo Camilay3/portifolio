@@ -1,3 +1,19 @@
+/* MODAL */
+app-dialogo {
+    position: fixed;
+    z-index: 999;
+    min-width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--darkShadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* CARD */
 section {
     height: 100%;
     padding: 2rem;
@@ -51,6 +67,7 @@ section .contatos a {
     padding: 1rem 0.2rem;
     border-radius: 1rem;
     text-decoration: none;
+    cursor: pointer;
     font-weight: bold;
     width: 100%;
     text-align: center;

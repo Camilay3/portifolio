@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { TelaService } from '../../services/tela.service';
+import { DialogoComponent } from '../../modals/dialogo/dialogo.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-card',
@@ -21,4 +23,12 @@ export class CardComponent {
       this.desktop = isDesktop;
     });
   }
+
+  #dialog = inject(MatDialog)
+  openModal() {
+    this.#dialog.open(DialogoComponent, {
+      disableClose: true
+    })
+  }
 }
+

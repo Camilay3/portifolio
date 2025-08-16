@@ -1,0 +1,30 @@
+<section>
+    <h1>Me envie uma mensagem</h1>
+
+    <form class="contact-form" (submit)="sendEmail($event)">
+        <div class="inputGroup">
+            <label>Nome</label>
+            <input placeholder="Digite seu nome" type="text" id="nome" name="nome" required>
+        </div>
+
+        <div class="inputGroup">
+            <label>Email</label>
+            <input placeholder="Digite seu emai" type="email" name="email" id="email" required>
+        </div>
+
+        <div class="inputGroup">
+            <label>Assunto</label>
+            <input maxlength="50" placeholder="Digite o assunto da mensagem" type="text" name="assunto" id="assunto" required>
+        </div>
+
+        <div class="inputGroup">
+            <label>Mensagem</label>
+            <textarea rows="5" placeholder="Digite a mensagem" name="mensagem" id="mensagem" required></textarea>
+        </div>
+
+        <div class="buttons">
+            <button (click)="closeModal()">Cancelar</button>
+            <button (click)="closeModal()" type="submit">Enviar mensagem</button>
+        </div>
+    </form>
+</section>
