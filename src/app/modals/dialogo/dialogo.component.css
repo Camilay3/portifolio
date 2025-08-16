@@ -1,11 +1,8 @@
-section {
+:host {
     display: flex;
     flex-direction: column;
-    width: fit-content;
-    height: fit-content;
     background-color: var(--purple);
-    padding: 2rem 3rem;
-    border-radius: 1rem;
+    padding: 2.5rem 3rem;
 }
 
 h1 {
@@ -24,14 +21,16 @@ form {
     flex-direction: column;
 }
 
-.inputGroup input, .inputGroup textarea {
+.inputGroup input,
+.inputGroup textarea {
     padding: 0.8rem;
     color: var(--darkPurple);
     border-radius: 0.2rem;
     border: 3px solid transparent;
 }
 
-.inputGroup input:focus, .inputGroup textarea:focus {
+.inputGroup input:focus,
+.inputGroup textarea:focus {
     border: 3px solid var(--lightPurple);
     outline: 0;
 }
@@ -75,4 +74,36 @@ form {
 .buttons button:nth-child(1) {
     background-color: transparent;
     border: 3px solid var(--lightPurple);
+}
+
+.buttons button:hover {
+    background-color: transparent;
+    border: 3px solid var(--white);
+}
+
+@media screen and (max-width: 500px) {
+    :host {
+        padding: 1.5rem 2rem;
+    }
+
+    h1 {
+        font-size: 1rem;
+    }
+
+    label {
+        font-size: 0.8rem;
+    }
+    
+    .inputGroup input,
+    .inputGroup textarea {
+        font-size: 0.6rem;
+        padding: 0.4rem;
+        border-radius: 0.1rem;
+    }
+    
+    .buttons button {
+        font-size: 0.6rem;
+        padding: 0.25rem;
+        border-radius: 0.3rem;
+    }
 }

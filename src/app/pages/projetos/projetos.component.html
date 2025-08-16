@@ -1,16 +1,16 @@
 @if (projetoAtual) {
-    <i [class.desativo]="indexProjeto == 0" (click)="paginaAnterior()" class="setas fas fa-chevron-left"></i>
-    <i [class.desativo]="indexProjeto == projetos.length-1" (click)="proximaPagina()" class="setas fas fa-chevron-right"></i>
+    <i [class.desativo]="indexProjeto == 0" (click)="paginaAnterior()" class="setas fas fa-chevron-left" title="Voltar"></i>
+    <i [class.desativo]="indexProjeto == projetos.length-1" (click)="proximaPagina()" class="setas fas fa-chevron-right" title="Avançar"></i>
 
     <div class="bloco">
         <div class="titulo">
             <h1>{{projetoAtual.nome}}</h1>
             @if (projetoAtual.url) {
-                <a href="{{projetoAtual.url}}" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                <a href="{{projetoAtual.url}}" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt" title="Abrir site"></i></a>
             }
         </div>
         @if (projetoAtual.repositorio) {
-            <a class="github" href="{{projetoAtual.repositorio}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a class="github" href="{{projetoAtual.repositorio}}" target="_blank" rel="noopener noreferrer" title="Abrir repositório no github"><i class="fab fa-github"></i></a>
         }
         <div class="descricao">
             <p>{{projetoAtual.descricao}}</p>
@@ -18,7 +18,7 @@
                 <div (click)="expandir(true)" [class.popup]="imagemExpandida" class="foto">
                     <img draggable="false" src="{{projetoAtual.src}}" alt="Imagem do(a) {{projetoAtual.nome}}">
                     @if (!imagemExpandida) {
-                        <i class="eye far fa-eye"></i>
+                        <i class="eye far fa-eye" title="Ver imagem"></i>
                     }
                 </div>
                 @if (imagemExpandida) {

@@ -1,0 +1,27 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 3rem;
+    background-color: var(--purple) !important;
+    gap: 1.5rem;
+}
+
+i {
+    font-size: 2.5rem;
+}
+
+.progresso {
+    align-self: self-start;
+    background-color: var(--white);
+    height: 4px;
+    width: 0;
+    border-radius: 0 1rem 1rem 0;
+    animation: contagem 3s linear;
+}
+
+@keyframes contagem {
+    from {width: 100%;}
+    to {width: 0;}
+}

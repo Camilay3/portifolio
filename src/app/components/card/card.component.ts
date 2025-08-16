@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { TelaService } from '../../services/tela.service';
 import { DialogoComponent } from '../../modals/dialogo/dialogo.component';
 import { MatDialog } from '@angular/material/dialog';
+import { AlertasComponent } from '../../modals/alertas/alertas.component';
 
 @Component({
   selector: 'app-card',
@@ -27,7 +28,9 @@ export class CardComponent {
   #dialog = inject(MatDialog)
   openModal() {
     this.#dialog.open(DialogoComponent, {
-      disableClose: true
+      disableClose: true,
+      height: 'auto',
+      maxHeight: '90vh',
     })
   }
 }

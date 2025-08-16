@@ -9,7 +9,7 @@
                 }
                 <div class="desc">
                     @if (evento.url) {
-                        <h3>{{evento.nome}}<a href="{{evento.url}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a></h3>
+                        <h3>{{evento.nome}}<a href="{{evento.url}}" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in" title="Ir ao post no Linkedin"></i></a></h3>
                     } @else {
                         <h3>{{evento.nome}}</h3>
                     }
@@ -24,9 +24,9 @@
     </div>
 
     <div class="paginacao">
-        <i [class.desativo]="indexPagina == 0" (click)="paginaAnterior()" class="setas fas fa-chevron-left"></i>
+        <i [class.desativo]="indexPagina == 0" (click)="paginaAnterior()" class="setas fas fa-chevron-left" title="Voltar"></i>
         <span class="page">Página {{indexPagina+1}} de {{totalPaginas}}</span>
-        <i [class.desativo]="indexPagina == totalPaginas-1" (click)="proximaPagina()" class="setas fas fa-chevron-right"></i>
+        <i [class.desativo]="indexPagina == totalPaginas-1" (click)="proximaPagina()" class="setas fas fa-chevron-right" title="Avançar"></i>
     </div>
 
 } @else {
