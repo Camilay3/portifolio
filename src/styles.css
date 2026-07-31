@@ -36,9 +36,7 @@ h1, h2, h3, span, li {
 	}
 }
 
-h3 {
-    margin-top: 2.5rem;
-}
+h3 { margin-top: 2.5rem; }
 
 @media screen and (max-width: 900px) {
     body { padding: 2rem; }

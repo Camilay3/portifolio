@@ -25,23 +25,13 @@ span {
 }
 
 @media screen and (max-width: 1300px) {
-    .icone {
-        margin: 0.8rem;
-    }
+    .icone { margin: 0.8rem; }
 }
 @media screen and (max-width: 1240px) {
-    i {
-        font-size: 2.5rem;
-    }
-    .icone {
-        margin: 0.6rem;
-    }
+    i { font-size: 2.5rem; }
+    .icone { margin: 0.6rem; }
 }
 @media screen and (max-width: 1140px) {
-    i {
-        font-size: 2rem;
-    }
-    .icone {
-        margin: 1rem 0.3rem;
-    }
+    i { font-size: 2rem; }
+    .icone { margin: 1rem 0.3rem; }
 }

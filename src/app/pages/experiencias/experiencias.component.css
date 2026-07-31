@@ -47,10 +47,8 @@
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
-}
 
-.experiencia .empresa i {
-    margin-right: 0.5rem;
+	.empresa i { margin-right: 0.5rem; }
 }
 
 .line {
@@ -127,11 +125,11 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-}
 
-.curso p {
-    display: flex;
-    gap: 0.5rem;
+	p {
+		display: flex;
+		gap: 0.5rem;
+	}
 }
 
 @media screen and (max-width: 500px) {

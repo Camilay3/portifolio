@@ -30,20 +30,20 @@ h3 {
     align-items: center;
     justify-content: center;
     width: 100%;
-}
 
-.evento span {
-    color: var(--lightPurple);
-    font-weight: bold;
-}
+	span {
+		color: var(--lightPurple);
+		font-weight: bold;
+	}
 
-.evento img {
-    width: 14%;
-    aspect-ratio: 1;
-    object-fit: cover;
-    object-position: center;
-    margin-right: 1rem;
-    border-radius: 1rem;
+	img {
+		width: 14%;
+		aspect-ratio: 1;
+		object-fit: cover;
+		object-position: center;
+		margin-right: 1rem;
+		border-radius: 1rem;
+	}
 }
 
 .desc {
@@ -53,27 +53,24 @@ h3 {
     height: 100%;
     width: 100%;
     max-width: 60%;
-}
 
-.desc p {
-    margin-top: 0.8rem;
-    text-align: justify;
-    hyphens: auto;
-}
+	p {
+		margin-top: 0.8rem;
+		text-align: justify;
+		hyphens: auto;
+	}
 
-.desc a {
-    border: 1px solid var(--white);
-    border-radius: 0.3rem;
-    padding: 0.3rem 0.2rem;
-    display: flex;
-    text-decoration: none;
-    top: 0;
-    right: 0;
-    font-size: 50%;
-}
-
-.desc a:hover i {
-    color: var(--lightPurple);
+	a {
+		border: 1px solid var(--white);
+		border-radius: 0.3rem;
+		padding: 0.3rem 0.2rem;
+		display: flex;
+		text-decoration: none;
+		top: 0;
+		right: 0;
+		font-size: 50%;
+		&:hover i { color: var(--lightPurple); }
+	}
 }
 
 .paginacao {
@@ -84,23 +81,17 @@ h3 {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+
+	i:hover {
+		cursor: pointer;
+	    color: var(--lightPurple);
+	}
 }
 
 .desativo {
     cursor: default !important;
     opacity: .5;
-}
-
-.desativo:hover {
-    color: var(--white) !important;
-}
-
-.paginacao i {
-    cursor: pointer;
-}
-
-.paginacao i:hover {
-    color: var(--lightPurple);
+	&:hover { color: var(--white) !important; }
 }
 
 .fade {
@@ -108,66 +99,34 @@ h3 {
     transition: opacity 0.3s linear;
 }
 
-.fade-enter {
-    opacity: 0;
-}
+.fade-enter { opacity: 0; }
 
 @media screen and (max-width: 1000px) {
-    .desc {
-        max-width: 100%;
-    }
-
-    .evento img {
-        width: 20%;
-    }
+    .desc { max-width: 100%; }
+    .evento img { width: 20%; }
 }
 
 @media screen and (max-width: 770px) {
-    .desc {
-        max-width: 100%;
-    }
+    .desc { max-width: 100%; }
 
     .evento {
-      margin-top: 1.5rem;
-    }
-
-    .evento img {
-        width: 15%;
-    }
-
-    .evento p, .evento span {
-        font-size: 0.8rem;
-    }
-
-    .evento h3 {
-        font-size: 1rem;
+		margin-top: 1.5rem;
+		img { width: 15%; }
+		p, span { font-size: 0.8rem; }
+		h3 {font-size: 1rem; }
     }
 }
 
 @media screen and (max-width: 500px) {
     .evento {
-      margin-top: 1rem;
+    	margin-top: 1rem;
+		img { width: 25%; }
+		p, span { font-size: 0.7rem; }
+		h3 {font-size: 0.9rem; }
     }
-
-    .evento img {
-        width: 25%;
-    }
-
-    .evento p, .evento span {
-        font-size: 0.7rem;
-    }
-
-    .evento h3 {
-        font-size: 0.9rem;
-    }
-
-    .paginacao span, .paginacao i {
-        font-size: 0.8rem;
-    }
+    .paginacao span, .paginacao i { font-size: 0.8rem; }
 }
 
 @media screen and (max-width: 450px) {
-    .evento img {
-        width: 30%;
-    }
+    .evento img { width: 30%; }
 }

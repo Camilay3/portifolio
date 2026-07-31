@@ -30,24 +30,19 @@
 .formacao {
     display: flex;
     align-items: center;
-}
 
-.formacao .descricao {
-    display: flex;
-    flex-wrap: wrap;
-}
+	.descricao {
+		display: flex;
+		flex-wrap: wrap;
+	}
 
-.formacao img {
-    margin-right: 1rem;
-}
+	span {
+		color: var(--lightPurple);
+		font-weight: bold;
+	}
 
-.descricao p {
-    margin-right: 0.5rem;
-}
-
-.formacao span {
-    color: var(--lightPurple);
-    font-weight: bold;
+	img { margin-right: 1rem; }
+	p { margin-right: 0.5rem; }
 }
 
 @media screen and (max-width: 500px) {

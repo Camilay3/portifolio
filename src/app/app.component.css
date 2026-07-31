@@ -11,13 +11,8 @@ section {
     grid-template-rows: auto 1fr;
 }
 
-app-navbar {
-    grid-area: app-navbar;
-}
-
-app-card {
-    grid-area: app-card;
-}
+app-navbar { grid-area: app-navbar; }
+app-card { grid-area: app-card; }
 
 .container {
     height: 100%;
@@ -42,19 +37,14 @@ app-card {
     scrollbar-color: var(--lightPurple) transparent;
 }
 
-router-outlet {
-    /* Para utilizar o display grid no container sem interferência */
-    display: none;
-}
+/* Para utilizar o display grid no container sem interferência */
+router-outlet { display: none; }
 
 @media screen and (max-width: 900px) {
-    section {
-        gap: 1rem;
-    }
+    section { gap: 1rem; }
 }
 
 @media screen and (max-width: 770px) {
-
     /* NAVBAR DESKTOP */
     section {
         grid-template-areas:
@@ -66,7 +56,5 @@ router-outlet {
         grid-template-rows: 20% 1fr auto;
     }
 
-    .container {
-        padding-top: 0.2rem;
-    }
+    .container { padding-top: 0.2rem; }
 }
