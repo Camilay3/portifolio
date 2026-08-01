@@ -30,10 +30,15 @@ body {
 h1, h2, h3, span, li {
 	cursor: default;
 
-	&::selection, p::selection, a::selection {
+	&::selection {
 		background-color: var(--lightPurple);
 		color: var(--white);
 	}
+}
+
+p::selection, a::selection {
+	background-color: var(--lightPurple);
+	color: var(--white);
 }
 
 h3 { margin-top: 2.5rem; }
