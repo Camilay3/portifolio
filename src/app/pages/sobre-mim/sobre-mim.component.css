@@ -46,5 +46,6 @@
 }
 
 @media screen and (max-width: 500px) {
-  .resumo { width: 100%; }
+	.resumo { width: 100%; }
+	h1 { font-size: 1.2rem; }
 }
